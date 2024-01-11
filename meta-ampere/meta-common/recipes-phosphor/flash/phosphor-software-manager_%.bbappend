@@ -11,6 +11,10 @@ SRC_URI += " \
 
 PACKAGECONFIG:append = " flash_bios static-dual-image"
 
+PACKAGECONFIG:append = " sync_bmc_files static-dual-image flash_bios"
+
+BMC_RO_MTD = "alt-bmc+bmc"
+
 SYSTEMD_SERVICE:${PN}:updater += "${@bb.utils.contains('PACKAGECONFIG', 'flash_bios', 'allow-reboot-actions.service', '', d)}"
 SYSTEMD_SERVICE:${PN}:updater += "${@bb.utils.contains('PACKAGECONFIG', 'flash_bios', 'prevent-reboot-actions.service', '', d)}"
 SYSTEMD_SERVICE:${PN}:updater += "${@bb.utils.contains('PACKAGECONFIG', 'flash_bios', 'turn-on-the-host-after-flash@.service', '', d)}"
