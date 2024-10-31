@@ -1,7 +1,6 @@
 FILESEXTRAPATHS:append := "${THISDIR}/${PN}:"
 
 EXTRA_OEMESON:append = " \
-     -Dinsecure-tftp-update=disabled \
      -Dredfish-bmc-journal=enabled \
      -Dhttp-body-limit=65 \
      -Dredfish-dump-log=enabled \

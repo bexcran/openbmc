@@ -10,7 +10,7 @@
             [
                 "chassis",
                 "all_sensors",
-                "/xyz/openbmc_project/inventory/system/board/COM_HPC_ALT_Carrier"
+                "/xyz/openbmc_project/inventory/system/chassis/COM_HPC_ALT_Carrier"
             ]
         ],
         "Params":
@@ -49,7 +49,7 @@
             [
                 "chassis",
                 "all_sensors",
-                "/xyz/openbmc_project/inventory/system/board/COM_HPC_ALT_Carrier"
+                "/xyz/openbmc_project/inventory/system/chassis/COM_HPC_ALT_Carrier"
             ]
         ],
         "Params":
@@ -88,7 +88,7 @@
             [
                 "chassis",
                 "all_sensors",
-                "/xyz/openbmc_project/inventory/system/board/COM_HPC_ALT_Carrier"
+                "/xyz/openbmc_project/inventory/system/chassis/COM_HPC_ALT_Carrier"
             ]
         ],
         "Params":
@@ -127,7 +127,7 @@
             [
                 "chassis",
                 "all_sensors",
-                "/xyz/openbmc_project/inventory/system/board/COM_HPC_ALT_Carrier"
+                "/xyz/openbmc_project/inventory/system/chassis/COM_HPC_ALT_Carrier"
             ]
         ],
         "Params":

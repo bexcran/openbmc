@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# shellcheck source=meta-ampere/meta-adlink/recipes-ampere/platform/ampere-utils/gpio-lib.sh
-source /usr/sbin/gpio-lib.sh
-
 function pre-platform-init() {
     echo "Do pre platform init"
 }
