@@ -44,11 +44,11 @@ do_probe () {
 
 turn_host_off () {
 	# Turn off the Host if it is currently ON
-	chassisstate=$(ipmitool power status | awk '{print $4}')
+	chassisstate=$(obmcutil chassisstate | awk -F. '{print $NF}')
 	echo "Current chassis state: $chassisstate"
-	if [ "$chassisstate" == 'on' ]; then
+	if [ "$chassisstate" == 'On' ]; then
 		echo "Turning the chassis off"
-		ipmitool power off > /dev/null
+		obmcutil chassisoff
 
 		# Wait 60s until Chassis is off
 		cnt=30
@@ -56,8 +56,8 @@ turn_host_off () {
 			cnt=$((cnt - 1))
 			sleep 2
 			# Check if HOST was OFF
-			chassisstate_off=$(ipmitool power status | awk '{print $4}')
-			if [ "$chassisstate_off" != 'on' ]; then
+			chassisstate_off=$(obmcutil chassisstate | awk -F. '{print $NF}')
+			if [ "$chassisstate_off" != 'On' ]; then
 				break
 			fi
 
@@ -165,12 +165,7 @@ fi
 eval set -- ""
 
 if [ -z "${IMAGE_TYPE}" ]; then
-	extension=${IMAGE##*.}
-	if [ "$extension" = "img" ];  then
-		IMAGE_TYPE=code
-	elif [ "$extension" = "bin" ]; then
-		IMAGE_TYPE=full
-	fi
+	IMAGE_TYPE=full
 fi
 
 if [ ! -f "${IMAGE}" ]; then
@@ -189,8 +184,8 @@ do_flash
 
 switch_spi_bus host
 
-if [ "$chassisstate" == 'on' ]; then
+if [ "$chassisstate" == 'On' ]; then
 	sleep 2
 	echo "Turning on the host"
-	ipmitool power on > /dev/null
+	systemctl start turn-on-the-host-after-flash@60
 fi

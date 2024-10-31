@@ -1,6 +1,6 @@
 [
     {
-        "path": "system/board/COM_HPC_ALT_Carrier/FAN1",
+        "path": "system/chassis/COM_HPC_ALT_Carrier/FAN1",
         "endpoints":
         [
             {
@@ -31,13 +31,13 @@
                 },
                 "paths":
                 [
-                    "/xyz/openbmc_project/inventory/system/chassis"
+                    "/xyz/openbmc_project/inventory/system/chassis/COM_HPC_ALT_Carrier"
                 ]
             }
         ]
     },
     {
-        "path": "system/board/COM_HPC_ALT_Carrier/FAN2",
+        "path": "system/chassis/COM_HPC_ALT_Carrier/FAN2",
         "endpoints":
         [
             {
@@ -68,13 +68,13 @@
                 },
                 "paths":
                 [
-                    "/xyz/openbmc_project/inventory/system/chassis"
+                    "/xyz/openbmc_project/inventory/system/chassis/COM_HPC_ALT_Carrier"
                 ]
             }
         ]
     },
     {
-        "path": "system/board/COM_HPC_ALT_Carrier/FAN4",
+        "path": "system/chassis/COM_HPC_ALT_Carrier/FAN4",
         "endpoints":
         [
             {
@@ -105,13 +105,13 @@
                 },
                 "paths":
                 [
-                    "/xyz/openbmc_project/inventory/system/chassis"
+                    "/xyz/openbmc_project/inventory/system/chassis/COM_HPC_ALT_Carrier"
                 ]
             }
         ]
     },
     {
-        "path": "system/board/COM_HPC_ALT_Carrier/FAN5",
+        "path": "system/chassis/COM_HPC_ALT_Carrier/FAN5",
         "endpoints":
         [
             {
@@ -142,7 +142,7 @@
                 },
                 "paths":
                 [
-                    "/xyz/openbmc_project/inventory/system/chassis"
+                    "/xyz/openbmc_project/inventory/system/chassis/COM_HPC_ALT_Carrier"
                 ]
             }
         ]
@@ -188,7 +188,7 @@
                     "fType": "powering"
                 },
                 "paths": [
-                    "/xyz/openbmc_project/inventory/system/chassis"
+                    "/xyz/openbmc_project/inventory/system/chassis/COM_HPC_ALT_Carrier"
                 ]
             }
         ]
