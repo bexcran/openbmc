@@ -1,0 +1,41 @@
+{
+	"leds": [
+		{
+			"group": "bmc_booted",
+			"members": [
+				{
+					"Name": "power",
+					"Action": "On",
+					"DutyOn": 50,
+					"Period": 0,
+					"Priority": "On"
+				}
+			]
+		},
+		{
+                        "group": "power_on",
+                        "members": [
+                                {
+                                        "Name": "power",
+                                        "Action": "On",
+                                        "DutyOn": 50,
+                                        "Period": 0,
+                                        "Priority": "On"
+                                }
+                        ]
+		},
+		{
+
+                        "group": "systemFault",
+                        "members": [
+                                {
+                                        "Name": "fault",
+                                        "Action": "Blink",
+                                        "DutyOn": 1000,
+                                        "Period": 0,
+                                        "Priority": "Blink"
+                                }
+                        ]
+		}
+	]
+}
