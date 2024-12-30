@@ -13,5 +13,5 @@ BBLAYERS ?= " \
   ##OEROOT##/meta-phosphor \
   ##OEROOT##/meta-aspeed \
   ##OEROOT##/meta-ampere \
-  ##OEROOT##/meta-ampere/meta-adlink \
+  ##OEROOT##/meta-ampere/meta-adlink-comhpcalt \
   "

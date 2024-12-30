@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # shellcheck disable=SC2046
-# shellcheck source=meta-ampere/meta-adlink/recipes-ampere/platform/ampere-platform-init/comhpcalt_platform_gpios_init.sh
+# shellcheck source=meta-ampere/meta-adlink-comhpcalt/recipes-ampere/platform/ampere-platform-init/comhpcalt_platform_gpios_init.sh
 source /usr/sbin/platform_gpios_init.sh
 
 #pre platform init function. implemented in platform_gpios_init.sh
