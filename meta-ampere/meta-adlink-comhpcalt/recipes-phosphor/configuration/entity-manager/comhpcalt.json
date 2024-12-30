@@ -3,48 +3,29 @@
         "Exposes": [
             {
                 "Type": "AspeedFan",
-                "Index": 0,
-                "Name": "FAN1",
-                "PowerState": "On",
-                "Connector": {
-                    "Name": "FAN1",
-                    "Pwm": 0,
-                    "Tachs": [0]
-                }
-            },
-            {
-                "Type": "AspeedFan",
                 "Index": 1,
-                "Name": "FAN2",
-                "PowerState": "On",
-                "Connector": {
-                    "Name": "FAN2",
-                    "Pwm": 1,
-                    "Tachs": [1]
-                }
+                "Name": "FAN1",
+                "PowerState": "On"
             },
             {
                 "Type": "AspeedFan",
-                "Index": 3,
-                "Name": "FAN4",
-                "PowerState": "On",
-                "Connector": {
-                    "Name": "FAN4",
-                    "Pwm": 3,
-                    "Tachs": [3]
-                }
+                "Index": 2,
+                "Name": "FAN2",
+                "PowerState": "On"
             },
             {
                 "Type": "AspeedFan",
                 "Index": 4,
-                "Name": "FAN5",
-                "PowerState": "On",
-                "Connector": {
-                    "Name": "FAN5",
-                    "Pwm": 4,
-                    "Tachs": [4]
-                }
+                "Name": "FAN4",
+                "PowerState": "On"
             },
+	    {
+                "Type": "AspeedFan",
+                "Index": 5,
+                "Name": "FAN5",
+                "PowerState": "On"
+            },
+
         {
             "Index": 0,
             "Name": "P2V5_RT",
