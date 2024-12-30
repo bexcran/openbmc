@@ -357,25 +357,25 @@
 			&pinctrl_pwm3_default
 			&pinctrl_pwm4_default>;
 
-	fan@0 {
-		reg = <0x00>;
-		aspeed,fan-tach-ch = /bits/ 8 <0x00>;
-	};
-
 	fan@1 {
 		reg = <0x01>;
 		aspeed,fan-tach-ch = /bits/ 8 <0x01>;
 	};
 
-	fan@3 {
-		reg = <0x03>;
-		aspeed,fan-tach-ch = /bits/ 8 <0x03>;
+	fan@2 {
+		reg = <0x2>;
+		aspeed,fan-tach-ch = /bits/ 8 <0x02>;
 	};
 
 	fan@4 {
 		reg = <0x04>;
 		aspeed,fan-tach-ch = /bits/ 8 <0x04>;
 	};
+
+	fan@5 {
+                reg = <0x05>;
+                aspeed,fan-tach-ch = /bits/ 8 <0x05>;
+        };
 };
 
 &vhub {
