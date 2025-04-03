@@ -24,6 +24,10 @@ LTO:pn-webkitgtk = ""
 LTO:pn-xserver-xorg = ""
 LTO:pn-grub = ""
 LTO:pn-grub-efi = ""
+LTO:pn-phosphor-debug-collector = ""
+LTO:pn-phosphor-fan = ""
+LTO:pn-bmcweb = ""
+LTO:pn-slpd-lite = ""
 
 # Custom LTO flags
 # disable partitioning/streaming algorithm since its uses ASM
