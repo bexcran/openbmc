@@ -2,6 +2,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 SRC_URI += " \
             file://comhpcalt.cfg                                 \
+            file://reduce-size.cfg                               \
             file://aspeed-bmc-adlink-comhpcalt.dts               \
             file://aspeed-bmc-adlink-comhpcalt-flash32.dtsi      \
             file://aspeed-bmc-adlink-comhpcalt-flash32-alt.dtsi  \
