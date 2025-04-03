@@ -16,17 +16,17 @@ partitions {
 	};
 
 	kernel@100000 {
-		reg = <0x100000 0x490000>;
+		reg = <0x100000 0x430000>;
 		label = "kernel";
 	};
 
-	rofs@590000 {
-		reg = <0x590000 0x19b0000>;
+	rofs@530000 {
+		reg = <0x530000 0x19d0000>;
 		label = "rofs";
 	};
 
-	rwfs@1f40000 {
-		reg = <0x1f40000 0xc0000>;
+	rwfs@1f00000 {
+		reg = <0x1f00000 0x100000>;
 		label = "rwfs";
 	};
 };
