@@ -1,0 +1,13 @@
+[Unit]
+Description=Phosphor LED Group Management Daemon
+Before=mapper-wait@-xyz-openbmc_project-led-groups.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/env phosphor-ledmanager -c /usr/share/phosphor-led-manager/com.adlink.Hardware.Chassis.Model.ComHpcAlt.json
+SyslogIdentifier=phosphor-ledmanager
+Type=dbus
+BusName={BUSNAME}
+
+[Install]
+WantedBy=multi-user.target
