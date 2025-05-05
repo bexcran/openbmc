@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Handle chassis and host power state for chassis poweron failure.
+
+chassis_status=$(/usr/sbin/ampere_power_util.sh status))
+if [ "$chassis_status" == "off" ]
+then
+    # Stop obmc-chassis-poweron.target to avoid chassis-state-manager to set power state to On.
+    /bin/systemctl stop obmc-chassis-poweron@0.target
+
+    # Set chassis power state to Off.
+    /bin/sh -c "busctl set-property $(mapper get-service /xyz/openbmc_project/state/chassis0) \
+        /xyz/openbmc_project/state/chassis0 \
+        xyz.openbmc_project.State.Chassis CurrentPowerState \
+        s xyz.openbmc_project.State.Chassis.PowerState.Off"
+fi

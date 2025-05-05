@@ -1,0 +1,81 @@
+{
+    "leds" : [
+    {
+            "group" : "bmc_booted",
+            "members" : [
+                {
+                    "Name" : "platform_heartbeat_green",
+                    "Action" : "Blink",
+                    "Priority" : "Blink",
+                    "DutyOn" : 50,
+                    "Period" : 1000
+                }
+            ]
+    },
+        {
+            "group" : "power_on",
+            "members" : [
+            ]
+        },
+        {
+            "group" : "fan1_fault",
+            "members" : [
+               {
+                  "Name" : "fan1_fault_red",
+                  "Action" : "Blink",
+                  "Priority" : "Blink",
+                  "DutyOn" : 50,
+                  "Period" : 1000
+               }
+            ]
+        },
+        {
+            "group" : "fan2_fault",
+            "members" : [
+               {
+                  "Name" : "fan2_fault_red",
+                  "Action" : "Blink",
+                  "Priority" : "Blink",
+                  "DutyOn" : 50,
+                  "Period" : 1000
+               }
+            ]
+        },
+        {
+            "group" : "fan3_fault",
+            "members" : [
+               {
+                  "Name" : "fan3_fault_red",
+                  "Action" : "Blink",
+                  "Priority" : "Blink",
+                  "DutyOn" : 50,
+                  "Period" : 1000
+               }
+            ]
+        },
+        {
+            "group" : "fan4_fault",
+            "members" : [
+               {
+                  "Name" : "fan4_fault_red",
+                  "Action" : "Blink",
+                  "Priority" : "Blink",
+                  "DutyOn" : 50,
+                  "Period" : 1000
+               }
+            ]
+        },
+        {
+            "group" : "fan5_fault",
+            "members" : [
+               {
+                  "Name" : "fan5_fault_red",
+                  "Action" : "Blink",
+                  "Priority" : "Blink",
+                  "DutyOn" : 50,
+                  "Period" : 1000
+               }
+            ]
+        }
+    ]
+}

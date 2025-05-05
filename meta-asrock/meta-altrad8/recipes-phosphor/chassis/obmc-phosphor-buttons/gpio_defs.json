@@ -1,0 +1,9 @@
+{
+    "gpio_definitions": [
+        {
+            "name": "ID_BTN",
+            "pin": "G1",
+            "direction": "in"
+        }
+    ]
+}

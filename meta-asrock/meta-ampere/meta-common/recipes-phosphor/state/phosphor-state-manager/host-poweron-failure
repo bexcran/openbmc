@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Handle host power state for chassis poweron failure.
+
+host_status=$(/usr/sbin/ampere_power_util.sh status)
+if [ "$host_status" != "on" ]
+then
+    # Stop obmc-host-startmin@{}.target to avoid chassis-state-manager to set power state to On.
+    /bin/systemctl stop obmc-host-startmin@0.target
+
+    # Set host power state to Off.
+    /bin/sh -c "busctl set-property $(mapper get-service /xyz/openbmc_project/state/host0") \
+        /xyz/openbmc_project/state/host0 \
+        xyz.openbmc_project.State.Host CurrentHostState \
+        s xyz.openbmc_project.State.Host.HostState.Off"
+fi

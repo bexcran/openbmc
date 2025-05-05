@@ -1,0 +1,42 @@
+#!/bin/bash
+
+add_sel()
+{
+  MESSAGE="$1"
+  LEVEL_STR="$2"
+  LEVEL_ENUM="xyz.openbmc_project.Logging.Entry.Level.Error"
+
+  case "$LEVEL_STR" in
+    "Error")
+      LEVEL_ENUM="xyz.openbmc_project.Logging.Entry.Level.Error"
+      ;;
+    "Info")
+      LEVEL_ENUM="xyz.openbmc_project.Logging.Entry.Level.Informational"
+      ;;
+    *)
+      echo "Unknown log level: $LEVEL_STR"
+      ;;
+  esac
+
+  busctl call \
+    xyz.openbmc_project.Logging /xyz/openbmc_project/logging \
+    xyz.openbmc_project.Logging.Create Create "ssa{ss}" \
+   "$MESSAGE" "$LEVEL_ENUM" 0
+}
+
+/usr/sbin/ampere_power_util.sh shutdown_ack
+host_status=$(/usr/sbin/ampere_power_util.sh status)
+
+if [ "$host_status" == "off" ]
+then
+    echo "Power off success"
+    msg="System power is off"
+    echo "${msg}"
+    add_sel "${msg}" "Info"
+    exit 0
+else
+    msg="Failed to set power off"
+    echo "${msg}"
+    add_sel "${msg}" "Error"
+    exit 1
+fi
